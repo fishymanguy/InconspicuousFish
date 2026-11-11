@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fish</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="wide">
+    <nav>
+        <a href="index.html" aria-current="page">Make a fish</a>
+        <a href="cook.html">Cook a fish</a>
+    </nav>
+
+    <h1>Fish</h1>
+    <p class="lede">Enter the name of your fish to get your own copy of the fish!</p>
+
+    <section class="card fish-pair">
+        <figure>
+            <div class="slot-frame">
+                <img id="our-fish" alt="Our fish" width="1630" height="1432">
+            </div>
+            <figcaption>Our fish</figcaption>
+        </figure>
+
+        <div>
+            <figure>
+                <div class="slot-frame">
+                    <p id="placeholder" class="placeholder">Your inconspicuous fish will spawn here</p>
+                    <img id="result-image" alt="Your re-keyed fish" hidden>
+                </div>
+                <figcaption>Your fish</figcaption>
+            </figure>
+            <div id="result-actions" hidden>
+                <a id="download-image" class="button">Download image</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="card">
+        <form id="rekey-form">
+            <label for="new-key">Name your fish</label>
+            <div class="row">
+                <input id="new-key" name="new-key" placeholder="Name#1234" autocomplete="off" spellcheck="false" required>
+                <button id="submit" type="submit">Create fish</button>
+            </div>
+            <div id="progress" class="progress" role="progressbar" aria-label="Spawning your fish" hidden>
+                <div id="progress-fill" class="progress-fill"></div>
+            </div>
+            <p id="status" role="status" aria-live="polite"></p>
+        </form>
+    </section>
+
+    <footer class="version">Latest version: <!--VERSION-->2026-11-11 03:41:09<!--/VERSION--></footer>
+</main>
+<script src="file-check.js"></script>
+<script type="module" src="app.js"></script>
+</body>
+</html>
